@@ -13,7 +13,6 @@
 Check the screenshots folder for more updates.
 
 ## To-Do:
-* Config starship
 * Monospace Nerd Font -> VSCode, Starship
 * Possibly add Firefox dotfiles
 
