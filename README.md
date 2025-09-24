@@ -7,7 +7,7 @@
 ### Wofi
 ![Screenshot 1](https://github.com/TPi-Home/Arch-Dotfiles/blob/main/screenshots/screen-2025-09-24_02-39-24.png)
 ### Neovim and Kitty terminal 
-![Screenshot 2](https://github.com/TPi-Home/Arch-Dotfiles/blob/main/screenshots/screen-2025-09-23_06-49-10.png)
+![Screenshot 2](https://github.com/TPi-Home/Arch-Dotfiles/blob/main/screenshots/screen-2025-09-24_03-15-07.png)
 ### Firefox
 ![Screenshot 2](https://github.com/TPi-Home/Arch-Dotfiles/blob/main/screenshots/screen-2025-09-23_06-54-17.png)
 Check the screenshots folder for more updates.
