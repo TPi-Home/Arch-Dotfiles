@@ -1,0 +1,102 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+# --- Core ---
+command_timeout = 1000
+add_newline = true
+palette = "screenshotBright"
+
+# Two-line prompt
+format = """
+$os$username$hostname: $directory $git_branch$git_status$git_commit$python$cmd_duration
+$character
+"""
+
+# --- Palette (brightened) ---
+[palettes.screenshotBright]
+bg     = "#0D1524"
+text   = "#E6ECF1"
+coral  = "#FF8585"
+salmon = "#FFB3A7"
+rose   = "#C27C9C"
+steel  = "#6A7E96"
+teal   = "#2C6A80"
+
+# --- Prompt char ---
+[character]
+success_symbol = "[❯](bold fg:teal)"
+error_symbol   = "[❯](bold red)"
+vicmd_symbol   = "[❮](bold fg:salmon)"
+
+# --- Identity ---
+[username]
+show_always = true
+format = "[$user](bold fg:text)"
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](bold fg:steel)"
+
+# --- Directory ---
+[directory]
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo  = true
+style             = "bold fg:text"
+read_only         = " "
+
+# --- Git ---
+[git_branch]
+symbol = " "
+style  = "bold fg:coral"
+format = "on [$symbol$branch]($style) "
+
+[git_status]
+style  = "fg:rose"
+format = "([$all_status$ahead_behind]($style)) "
+conflicted = " "
+untracked  = " "
+modified   = " "
+staged     = "(${count}) "
+renamed    = " "
+deleted    = " "
+stashed    = " "
+ahead      = "⇡${count}"
+behind     = "⇣${count}"
+diverged   = "⇕⇡${ahead_count}⇣${behind_count}"
+
+[git_commit]
+commit_hash_length = 4
+
+# --- Python / duration ---
+[python]
+python_binary = ["./venv/bin/python", "python3", "python", "python2"]
+format = " [${version}${virtualenv}]($style)"
+style  = "fg:steel"
+
+[cmd_duration]
+min_time = 500
+format   = "[$duration](bold fg:teal)"
+
+# --- Noisy modules off ---
+[aws]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[gcloud]
+disabled = true
+
+[nodejs]
+disabled = true
+
+# --- OS glyphs, trimmed ---
+[os]
+disabled = false
+format = "[$symbol](fg:coral)"
+
+[os.symbols]
+Arch = " "
+Linux = " "
+Macos = " "
+Windows = "󰍲 "
