@@ -1,6 +1,6 @@
 # Arch-Dotfiles
 ## Included:
-* Matching Wofi, waybar, hyprland, and NVIM themes.
+* Matching Wofi, Waybar, Hyprland, and NVIM themes.
 * i3 like keybindings except with VIM keys (h,j,k,l) as opposed to (j,k,l,;)
 
 ## Screenshots:
@@ -16,3 +16,9 @@ Check the screenshots folder for more updates.
 * Config starship
 * Monospace Nerd Font -> VSCode, Starship
 * Possibly add Firefox dotfiles
+
+## Credits:
+### Wallpaper:
+
+### Font: 
+https://monaspace.githubnext.com/
