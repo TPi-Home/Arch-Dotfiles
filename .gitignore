@@ -1,0 +1,12 @@
+Code/
+chromium/
+dconf/
+htop/
+Kitware/
+nautilus/
+procps/
+pulse/
+
+user-dirs.dirs
+user-dirs.locale
+
