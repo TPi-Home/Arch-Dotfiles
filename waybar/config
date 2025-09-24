@@ -1,0 +1,67 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "cpu",
+    "memory",
+    "battery",
+    "tray"
+  ],
+
+  "clock": {
+    "format": "{:%a %b %d  %I:%M %p}"
+  },
+
+  "hyprland/workspaces": {
+    "on-click": "hyprctl dispatch workspace {id}"
+  },
+  "hyprland/window": {
+    "max-length": 80
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": "muted {icon}",
+    "scroll-step": 3
+  },
+
+  "network": {
+    "interval": 3,
+    "format-wifi": "{essid} {signalStrength}%",
+    "format-ethernet": "{ifname}",
+    "format-disconnected": "disconnected"
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": "{usage}% CPU"
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": "{used:0.1f}G"
+  },
+
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ⚡",
+    "format-plugged": "{capacity}% 🔌",
+    "format-alt": "{time} {icon}"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8,
+    "show-passive-items": true
+  }
+}

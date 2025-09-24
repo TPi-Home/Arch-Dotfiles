@@ -1,0 +1,105 @@
+/* ===== Palette (matches your Wofi + wallpaper) ===== */
+@define-color bg        #111827;   /* deep blue-gray */
+@define-color bg2       #1f2937;
+@define-color text      #eae6e9;   /* off-white */
+@define-color accent    #fb6a6b;   /* coral */
+@define-color rose      #9a5768;
+@define-color teal      #365768;   /* border/lines */
+@define-color mauve     #645668;   /* subtle separators */
+
+/* ===== Bar container ===== */
+window#waybar {
+  background: @bg;
+  color: @text;
+  border-bottom: 2px solid @teal;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+
+/* Use Monaspace Neon Nerd Font Mono everywhere */
+* {
+  font-family: "MonaspiceNe Nerd Font Mono", "Monaspace Neon", monospace;
+  font-size: 10pt; /* ~20% smaller than original 12.5pt */
+}
+
+/* Give the bar some breathing room on tilers */
+window#waybar > box {
+  margin: 6px 8px;
+}
+
+/* ===== Modules: shared look ===== */
+#workspaces, #clock, #battery, #network, #pulseaudio, #tray, #window, #cpu, #memory {
+  padding: 3px 9px;
+  margin: 0 3px;
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* Hover highlight */
+#workspaces:hover, #clock:hover, #battery:hover, #network:hover, #pulseaudio:hover, #tray:hover, #cpu:hover, #memory:hover {
+  background: @bg2;
+}
+
+/* ===== Workspaces ===== */
+#workspaces button {
+  color: @text;
+  background: transparent;
+  margin: 0 3px;
+  padding: 3px 9px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+#workspaces button.active {
+  color: #0c0c0c;
+  background: linear-gradient(90deg, @accent, @rose);
+  border: 1px solid @mauve;
+}
+#workspaces button.urgent {
+  background: @accent;
+  color: #0c0c0c;
+}
+#workspaces button:hover {
+  border-color: @teal;
+}
+
+/* ===== Focused window title ===== */
+#window {
+  color: @text;
+  border: 1px solid @mauve;
+  background: rgba(25,31,40,0.45);
+}
+
+/* ===== Clock ===== */
+#clock {
+  border: 1px solid @teal;
+  background: rgba(31,41,55,0.55);
+}
+
+/* ===== Audio / Network / Battery / CPU / Memory ===== */
+#pulseaudio, #network, #battery, #cpu, #memory {
+  border: 1px solid @mauve;
+  background: rgba(31,41,55,0.45);
+}
+#pulseaudio.muted {
+  color: @mauve;
+}
+
+/* ===== System tray ===== */
+#tray {
+  border: 1px solid @teal;
+  background: rgba(31,41,55,0.35);
+}
+#tray menu {
+  background: @bg2;
+  color: @text;
+  border: 1px solid @teal;
+}
+
+/* ===== Tooltips ===== */
+tooltip {
+  background: @bg2;
+  color: @text;
+  border: 1px solid @teal;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.45);
+}

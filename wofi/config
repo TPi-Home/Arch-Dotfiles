@@ -1,0 +1,12 @@
+allow_markup=true
+matching=fuzzy
+insensitive=true
+prompt=run:
+width=40%
+height=40%
+location=center
+anchor=center
+hide_scroll=true
+show-actions=false
+term=kitty
+style=/home/tyler/.config/wofi/style.css

@@ -1,0 +1,106 @@
+/* Minimal, compatible CSS for Wofi 1.5.x (no vars, no comments in rules) */
+window {
+  background-color: #111827;
+  color: #eae6e9;
+  border: 2px solid #365768;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+/* Input line */
+#input {
+  background-color: #1f2937;
+  color: #eae6e9;
+  border: 1px solid #645668;
+  border-radius: 10px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+}
+
+/* List containers */
+#outer-box { padding: 4px; }
+#inner-box { background-color: transparent; }
+
+/* Each entry row */
+#entry {
+  padding: 8px 10px;
+  margin: 2px 0;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+/* Selected row */
+#entry:selected {
+  background-color: #fb6a6b;
+  color: #0c0c0c;
+}
+
+/* Explicit text color (some builds ignore 'window { color: … }') */
+#text {
+  color: #eae6e9;
+}
+
+/* Optional icons */
+#img {
+  margin-right: 8px;
+}
+
+/* Scrollbar */
+#scroll { background-color: transparent; }
+
+/* Font */
+* {
+  font-family: "JetBrains Mono", "Inter", "DejaVu Sans", sans-serif;
+  font-size: 12.5pt;
+}
+
+/* === Wofi actions (arrow submenu) — GTK3 PopoverMenu === */
+
+/* The popup surface itself */
+popover,
+popover.background,
+window#actions,
+#actions {
+  background-color: #1f2937;     /* dark */
+  color: #eae6e9;                 /* readable text */
+  border: 1px solid #365768;      /* teal edge */
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* Action rows inside the popover */
+popover.background .modelbutton,
+#actions .modelbutton,
+#actions #entry {
+  background: transparent;
+  color: #eae6e9;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Hover / selected state */
+popover.background .modelbutton:hover,
+popover.background .modelbutton:checked,
+#actions .modelbutton:hover,
+#actions #entry:selected {
+  background: linear-gradient(90deg, #fb6a6b, #9a5768);  /* coral → rose */
+  color: #0c0c0c;
+}
+
+/* Text and icons inside rows */
+popover.background .modelbutton label,
+#actions #text {
+  color: inherit;
+}
+
+popover.background .modelbutton image,
+#actions #img {
+  margin-right: 8px;
+}
+
+/* Scroll area in tall popovers (if present) */
+popover.background scrolledwindow,
+#actions #scroll {
+  background: transparent;
+}
+

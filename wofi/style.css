@@ -1,0 +1,122 @@
+/* === Wofi — kill the inner square & unify look ===
+   palette: bg #111827 | bg2 #1f2937 | text #eae6e9 | border #365768
+   accent gradient: coral→rose (#fb6a6b → #9a5768)
+*/
+
+/* ── Outer window ─────────────────────────────────────────────── */
+window.background {
+  background-color: #111827;
+  color: #eae6e9;
+  border: 2px solid #365768;
+  border-radius: 12px;
+  background-clip: padding-box;
+  padding: 8px;
+}
+window.background * {
+  color: #eae6e9;
+  font-family: "MonaspiceNe Nerd Font Mono", "Monaspace Neon", monospace;  font-size: 12.5pt;
+}
+
+/* Search */
+#input {
+  background-color: #1f2937;
+  color: #eae6e9;
+  border: 1px solid #645668;
+  border-radius: 10px;
+  background-clip: padding-box;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+}
+
+/* Main list */
+#outer-box { padding: 4px; }
+#inner-box { background: transparent; }
+
+#entry {
+  background: transparent;
+  color: #eae6e9;
+  padding: 8px 12px;
+  margin: 2px 0;
+  border-radius: 10px;
+}
+#entry:selected {
+  background-image: linear-gradient(90deg, #fb6a6b, #9a5768);
+  color: #0c0c0c;
+}
+#text { color: inherit; }
+#img  { margin-right: 8px; }
+
+/* ── Actions / submenu (arrow popup) — ONLY the popover paints bg ───────── */
+
+/* 1) Popover container: rounded + bg + border */
+popover,
+popover.background {
+  background-color: #1f2937 !important;   /* the only visible submenu bg */
+  color: #eae6e9 !important;
+  border: 1px solid #365768 !important;
+  border-radius: 12px !important;
+  background-clip: padding-box !important;
+  padding: 6px !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
+}
+
+/* 2) Nuke all inner backgrounds/borders so no inner square can show */
+popover * {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 12px !important;     /* inherit rounding at every layer */
+  background-clip: padding-box !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* 3) Submenu items (entries/buttons) — rounded like the main list */
+popover.background .modelbutton,
+#actions #entry,
+menu menuitem {
+  background: transparent !important;
+  color: #eae6e9 !important;
+  padding: 8px 12px !important;
+  margin: 2px 0 !important;
+  border-radius: 10px !important;
+}
+
+/* 4) Hover/selected inside submenu = same gradient as main list */
+popover.background .modelbutton:hover,
+popover.background .modelbutton:checked,
+#actions #entry:selected,
+menu menuitem:hover,
+menu menuitem:active {
+  background-image: linear-gradient(90deg, #fb6a6b, #9a5768) !important;
+  color: #0c0c0c !important;
+}
+
+/* ── Fallback for builds using traditional menus ─────────────────────────── */
+menu,
+menu > * {
+  background-color: #1f2937 !important;
+  color: #eae6e9 !important;
+  border: 1px solid #365768 !important;
+  border-radius: 12px !important;
+  background-clip: padding-box !important;
+  padding: 6px !important;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.45) !important;
+}
+menu * {
+  background: transparent !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background-clip: padding-box !important;
+}
+menu menuitem {
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  margin: 2px 0 !important;
+}
+menu menuitem label { color: inherit !important; }
+menu menuitem image { margin-right: 8px !important; }
+
+/* Scroll areas transparent */
+popover.background scrolledwindow,
+#actions #scroll { background: transparent !important; }
