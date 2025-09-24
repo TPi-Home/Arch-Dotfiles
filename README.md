@@ -1,6 +1,13 @@
 # Arch-Dotfiles
-## Included:
-* Matching Wofi, Waybar, Hyprland, and NVIM themes.
+## Included: 
+### Matching themes, configs, fonts, and plugins for: 
+* Wofi 
+* Waybar
+* Hyprland
+* NVIM
+* Kitty
+* zsh/starship
+### Extras:
 * i3 like keybindings except with VIM keys (h,j,k,l) as opposed to (j,k,l,;)
 
 ## Screenshots:
@@ -12,6 +19,20 @@
 ![Screenshot 2](https://github.com/TPi-Home/Arch-Dotfiles/blob/main/screenshots/screen-2025-09-23_06-54-17.png)
 Check the screenshots folder for more updates.
 
+## Dependencies:
+### Core
+```
+sudo pacman -S --needed hyprland waybar wofi kitty neovim zsh starship git stow
+```
+### Optional (quality of life)
+```
+sudo pacman -S --needed ripgrep fd fzf unzip
+```
+### Font:
+Font used in screenshots: Monaspace Neon (see Credits). If you prefer it, install manually and keep a Nerd Symbols font available for glyphs. 
+```
+sudo pacman -S --needed ttf-nerd-fonts-symbols 
+```
 ## To-Do:
 * Monospace Nerd Font -> VSCode, Starship
 * Possibly add Firefox dotfiles
