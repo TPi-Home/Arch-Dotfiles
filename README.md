@@ -9,6 +9,8 @@
 * zsh/starship
 ### Extras:
 * i3 like keybindings except with VIM keys (h,j,k,l) as opposed to (j,k,l,;)
+## To-Do:
+* Fix broken icons on status bar
 
 ## Screenshots:
 ### Wofi
