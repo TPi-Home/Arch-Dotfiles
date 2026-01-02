@@ -6,7 +6,8 @@
 * Hyprland
 * NVIM
 * Kitty
-* zsh/starship
+* Starship
+* To-do: zsh
 ### Extras:
 * i3 like keybindings except with VIM keys (h,j,k,l) as opposed to (j,k,l,;)
 ## To-Do:
