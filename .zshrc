@@ -70,10 +70,25 @@ fi
 bindkey '^I' expand-or-complete
 bindkey -M emacs '^I' expand-or-complete
 bindkey -M viins '^I' expand-or-complete
-bindkey -M menuselect '^I' expand-or-complete
 
 # Useful word ops that avoid Windows-key combos
 bindkey '^[^?' backward-kill-word   # Alt+Backspace (common)
 bindkey '^[d'  kill-word            # Alt+d
 bindkey '^[D'  kill-word
+
+# ======================
+# History configuration
+# ======================
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt APPEND_HISTORY       # don't overwrite history file
+setopt INC_APPEND_HISTORY   # write history immediately
+setopt SHARE_HISTORY        # share across terminals
+setopt HIST_IGNORE_DUPS     # ignore consecutive duplicates
+setopt HIST_IGNORE_ALL_DUPS # remove older duplicates
+setopt HIST_REDUCE_BLANKS   # trim extra spaces
+setopt HIST_VERIFY          # edit history before executing
 
