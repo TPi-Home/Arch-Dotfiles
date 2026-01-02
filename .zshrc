@@ -1,3 +1,4 @@
+# This dotfile is specifically for my WSL setup:
 # ======================
 # Environment
 # ======================
